@@ -107,6 +107,15 @@ section {
   display: block;
 }
 
+img,
+video,
+iframe,
+picture,
+figure {
+  max-width: 100%;
+  display: block;
+}
+
 body {
   line-height: 1;
 }
