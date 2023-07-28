@@ -1,37 +1,188 @@
 body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   background-image: url("/assets/images/png/fondo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: -2.4rem -2.4rem;
+  background-position: -5.5rem -5.5rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  width: 100%;
+  height: 100vh;
 }
 
 .layout__container {
-  width: 80vw;
-  height: 80vh;
-  margin: 10vh auto;
-  overflow: hidden;
   display: flex;
-  flex-direction: row;
-}
-
-.container__menu {
-  position: absolute;
-  right: 0;
-}
-
-.container__aside {
+  grid-row: 2 / 12;
+  grid-column: 2 / 12;
+  position: relative;
+  max-width: 90em;
+  max-height: 44em;
+  border-radius: 3em;
+  box-shadow: 0px 0px 1em 1px rgba(0, 0, 0, 0.18);
   background-color: var(--color-secondary);
 }
 
-.aside__container-image {
-  width: 9rem;
-  height: 9rem;
+.container__aside {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  position: relative;
+  width: 30%;
+  padding: 4em 0em;
+  border-top-left-radius: 3em;
+  border-bottom-left-radius: 3em;
+  background-color: var(--color-secondary);
+  color: var(--color-main);
+  overflow: auto;
 }
+
+.aside__container-image {
+  position: relative;
+  z-index: 10;
+  width: 12em;
+  height: 12em;
+}
+
+.aside__container-image::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 9%;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: repeating-radial-gradient(
+    circle at center center,
+    var(--color-main),
+    var(--color-main) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-size: 0.6em 0.6em;
+  opacity: 0.5;
+}
+
 .aside__image {
   width: 100%;
   height: 100%;
-  border: 0.1rem solid var(--color-main);
+  border: 2px solid var(--color-main);
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
+}
+
+.aside__info-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2em 0em;
+  font-family: var(--font-poppins);
+}
+
+.info-user__name {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+.info-user__job-title {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.info-user__list {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.info-user__icon {
+  padding: 0.5em;
+  border-radius: 50%;
+  opacity: 0.9;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.info-user__icon:hover {
+  opacity: 1;
+  background-color: rgba(246, 246, 246, 0.3);
+}
+
+.aside__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-row: 3 / 4;
+}
+
+.footer__link {
+  padding: 1em 2em;
+  margin-top: 1.5em;
+  border: 1px solid var(--color-main);
+  border-radius: 1em;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  font-family: var(--font-poppins);
+  color: var(--color-main);
+  background-color: var(--color-secondary);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.footer__link:hover {
+  color: var(--color-secondary);
+  background-color: var(--color-main);
+}
+
+.footer__copy {
+  position: relative;
+  bottom: -5em;
+}
+
+/* Contenido Principal */
+.container__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  border-radius: 3em;
+  background-color: var(--color-main);
+}
+
+.main__name {
+  font-size: 3.3rem;
+  line-height: 4rem;
+  font-weight: bold;
+  font-family: var(--font-poppins);
+  text-align: center;
+  color: var(--color-titles);
+}
+
+.main__job-title {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  text-align: center;
+  color: var(--color-subtitles);
+}
+
+/* Contenido del NavBar */
+.container__menu {
+  position: absolute;
+  right: -7em;
+}
+
+@media screen and (width >= 1728px) {
+  body {
+    justify-items: center;
+  }
+  .layout__container {
+    min-width: 90em;
+  }
+}
+
+@media screen and (height >= 845px) {
+  body {
+    align-items: center;
+  }
 }
