@@ -169,7 +169,62 @@ body {
 /* Contenido del NavBar */
 .container__menu {
   position: absolute;
-  right: -7em;
+  right: -5em;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  width: 3.5em;
+  padding: 1em 0em;
+  border-radius: 3em;
+  box-shadow: 0px 0px 1em 1px rgba(0, 0, 0, 0.18);
+  background-color: var(--color-main);
+  position: relative;
+}
+
+.menu__option {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 2em;
+  cursor: pointer;
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+}
+
+.menu__icon {
+  font-size: 1.5rem;
+  color: var(--color-subtitles);
+  transition: color 0.3s ease-in-out;
+}
+
+.menu__option:hover .menu__icon {
+  color: var(--color-secondary);
+}
+
+.menu__overlay {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  height: 2em;
+  padding: 0.3em 0.6em;
+  font-family: var(--font-poppins);
+  color: var(--color-main);
+  background-color: var(--color-secondary);
+  white-space: nowrap;
+  opacity: 0;
+  transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu__option:hover .menu__overlay {
+  right: 100%;
+  opacity: 1;
 }
 
 @media screen and (width >= 1728px) {
