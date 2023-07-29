@@ -139,7 +139,7 @@ body {
   bottom: -5em;
 }
 
-/* Contenido Principal */
+/* Estilos del contenido principal */
 .container__main {
   display: flex;
   flex-direction: column;
@@ -148,22 +148,6 @@ body {
   width: 70%;
   border-radius: 3em;
   background-color: var(--color-main);
-}
-
-.main__name {
-  font-size: 3.3rem;
-  line-height: 4rem;
-  font-weight: bold;
-  font-family: var(--font-poppins);
-  text-align: center;
-  color: var(--color-titles);
-}
-
-.main__job-title {
-  font-size: 1.3rem;
-  line-height: 2rem;
-  text-align: center;
-  color: var(--color-subtitles);
 }
 
 /* Contenido del NavBar */
@@ -200,7 +184,7 @@ body {
 
 .menu__icon {
   font-size: 1.5rem;
-  color: var(--color-subtitles);
+  color: var(--color-icons);
   transition: color 0.3s ease-in-out;
 }
 
