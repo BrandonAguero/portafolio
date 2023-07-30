@@ -145,9 +145,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 6em;
   width: 70%;
   border-radius: 3em;
   background-color: var(--color-main);
+  font-family: var(--font-poppins);
 }
 
 /* Contenido del NavBar */
