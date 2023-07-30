@@ -1,0 +1,14 @@
+.main__name {
+  font-size: 3.3rem;
+  line-height: 4rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-titles);
+}
+
+.main__job-title {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  text-align: center;
+  color: var(--color-subtitles);
+}
