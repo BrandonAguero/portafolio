@@ -23,7 +23,7 @@
           </li>
           <li class="menu__option">
             <a href="/html/about-me.html" class="menu__link">
-              <i class="fa-solid fa-user menu__icon"></i>
+              <i class="fa-solid fa-user menu__icon menu__icon--active"></i>
               <span class="menu__overlay">Sobre mí</span>
             </a>
           </li>
@@ -89,13 +89,11 @@
       </aside>
       <main class="container__main">
         <div class="main__container-info">
-          <section class="main__section main__section--about-me">
-            <header class="about-me__header">
-              <h1 class="about-me__title">
-                Sobre <span class="title__color">Mí</span>
-              </h1>
-            </header>
-            <div class="about-me__personal-info">
+          <header class="main__header main__header--about-me">
+            <h1 class="about-me__title">
+              Sobre <span class="title__color">Mí</span>
+            </h1>
+            <section class="about-me__personal-info">
               <p class="personal-info__description">
                 Soy desarrollador de frontend con una mentalidad competitiva.
                 Para mí, la competencia es una fuente de motivación, donde las
@@ -133,11 +131,11 @@
                   <span class="personal-info__value">+51 987398362</span>
                 </li>
               </ul>
-            </div>
-          </section>
+            </section>
+          </header>
           <section class="main__section main__section--soft-skills">
             <header class="soft-skills__header">
-              <h2 class="soft-skills__title">
+              <h2 class="section__title section__title--soft-skills">
                 Habilidades <span class="title__color">Blandas</span>
               </h2>
             </header>
@@ -196,7 +194,7 @@
           </section>
           <section class="main__section main__section--hard-skills">
             <header class="hard-skills__header">
-              <h2 class="hard-skills__title">
+              <h2 class="section__title section__title--hard-skills">
                 Habilidades <span class="title__color">Técnicas</span>
               </h2>
             </header>
@@ -247,7 +245,7 @@
           </section>
           <section class="main__section main__section--reviews">
             <header class="reviews__header">
-              <h2 class="reviews__title">
+              <h2 class="section__title section__title--reviews">
                 Testimonios <span class="title__color">Académicos</span>
               </h2>
             </header>
@@ -310,7 +308,7 @@
           </section>
           <section class="main__section main__section--hobbies">
             <header class="hobbies__header">
-              <h2 class="hobbies__title">
+              <h2 class="section__title section__title--hobbies">
                 Actividades <span class="title__color">Recreativas</span>
               </h2>
             </header>
