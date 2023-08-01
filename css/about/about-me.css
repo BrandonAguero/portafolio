@@ -12,7 +12,7 @@
 }
 
 .personal-info__description {
-  width: 50%;
+  width: 65%;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: lighter;
@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  width: 50%;
+  width: 35%;
 }
 
 .personal-info__key {
