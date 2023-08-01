@@ -1,0 +1,29 @@
+.section__title {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  font-size: 1.7rem;
+}
+
+.section__title::after {
+  content: "";
+  position: absolute;
+  top: 0.3em;
+  right: -1em;
+  z-index: -10;
+  width: 2.5em;
+  height: 1em;
+  background-image: repeating-radial-gradient(
+    circle at center center,
+    var(--color-secondary),
+    var(--color-secondary) 1px,
+    var(--color-transparent) 1px,
+    var(--color-transparent) 100%
+  );
+  background-size: 0.3em 0.3em;
+  opacity: 0.7;
+}
+
+.title__color {
+  color: var(--color-secondary);
+}
