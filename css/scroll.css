@@ -5,6 +5,14 @@
 
 /* Scroll Chrome*/
 
+.main__container-info {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 6em;
+  padding: 4em;
+  overflow-y: scroll;
+}
+
 .main__container-info::-webkit-scrollbar {
   width: 1.3em;
   background: var(--color-transparent);
