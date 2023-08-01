@@ -68,10 +68,11 @@
     circle at center center,
     var(--color-secondary),
     var(--color-secondary) 1px,
-    transparent 1px,
-    transparent 100%
+    var(--color-transparent) 1px,
+    var(--color-transparent) 100%
   );
   background-size: 0.25em 0.25em;
+  opacity: 0.7;
 }
 
 /* Section Titles*/
@@ -94,10 +95,11 @@
     circle at center center,
     var(--color-secondary),
     var(--color-secondary) 1px,
-    transparent 1px,
-    transparent 100%
+    var(--color-transparent) 1px,
+    var(--color-transparent) 100%
   );
   background-size: 0.3em 0.3em;
+  opacity: 0.7;
 }
 
 .title__color {
